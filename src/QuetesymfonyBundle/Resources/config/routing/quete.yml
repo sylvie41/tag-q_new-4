@@ -1,0 +1,24 @@
+quete_index:
+    path:     /
+    defaults: { _controller: "QuetesymfonyBundle:Quete:index" }
+    methods:  GET
+
+quete_show:
+    path:     /{id}/show
+    defaults: { _controller: "QuetesymfonyBundle:Quete:show" }
+    methods:  GET
+
+quete_new:
+    path:     /new
+    defaults: { _controller: "QuetesymfonyBundle:Quete:new" }
+    methods:  [GET, POST]
+
+quete_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "QuetesymfonyBundle:Quete:edit" }
+    methods:  [GET, POST]
+
+quete_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "QuetesymfonyBundle:Quete:delete" }
+    methods:  DELETE

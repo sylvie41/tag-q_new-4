@@ -1,0 +1,18 @@
+QuetesymfonyBundle\Entity\Quete:
+    type: entity
+    table: null
+    repositoryClass: QuetesymfonyBundle\Repository\QueteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        age:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

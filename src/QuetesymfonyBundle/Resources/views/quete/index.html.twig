@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Quetes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for quete in quetes %}
+            <tr>
+                <td><a href="{{ path('quete_show', { 'id': quete.id }) }}">{{ quete.id }}</a></td>
+                <td>{{ quete.name }}</td>
+                <td>{{ quete.age }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('quete_show', { 'id': quete.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('quete_edit', { 'id': quete.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('quete_new') }}">Create a new quete</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,7 @@
+quetesymfony_quete:
+    resource: "@QuetesymfonyBundle/Resources/config/routing/quete.yml"
+    prefix:   /quete
+
+quetesymfony_homepage:
+    path:     /
+    defaults: { _controller: QuetesymfonyBundle:Default:index }
