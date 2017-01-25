@@ -1,2 +1,11 @@
 98834d,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/,1484580264,,200
 3b6120,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/,1484580573,,200
+f47aa6,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/,1485355068,,200
+24ed85,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/new,1485355074,a563f2,200
+a563f2,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/new,1485355074,,404
+3235b1,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/flight/new,1485355088,b653e2,200
+b653e2,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/flight/new,1485355088,,500
+24b7c3,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/flight/new,1485355197,fa6bad,200
+fa6bad,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/flight/new,1485355197,,500
+bdae6b,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/flight/new,1485355221,39ba58,200
+39ba58,127.0.0.1,GET,http://localhost/tag-q_new-4/web/app_dev.php/flight/new,1485355221,,500

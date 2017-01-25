@@ -164,4 +164,52 @@ class PlaneModel
     {
         return $this->status;
     }
+
+
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $arrivals;
+
+    /**
+     * Constructor
+     */
+    public function __constructarrivals()
+    {
+        $this->arrivals = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add arrivals
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $arrivals
+     * @return Terrain
+     */
+    public function addArrivals(\WCS\CoavBundle\Entity\Flight $arrivals)
+    {
+        $this->arrivals[] = $arrivals;
+
+        return $this;
+    }
+
+    /**
+     * Remove arrivals
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $arrivals
+     */
+    public function removeArrival(\WCS\CoavBundle\Entity\Flight $arrivals)
+    {
+        $this->arrivals->removeElement($arrivals);
+    }
+
+    /**
+     * Get arrivals
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getArrivals()
+    {
+        return $this->arrivals;
+    }
 }

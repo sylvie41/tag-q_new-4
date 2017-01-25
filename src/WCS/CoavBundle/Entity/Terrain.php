@@ -9,6 +9,14 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Terrain
 {
+    public function _toString()
+    {
+        return $this->name;
+    }
+
+
+
+
     /**
      * @var int
      */
@@ -191,5 +199,99 @@ class Terrain
     public function getCountry()
     {
         return $this->country;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $departures;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->departures = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add departures
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $departures
+     * @return Terrain
+     */
+    public function addDeparture(\WCS\CoavBundle\Entity\Flight $departures)
+    {
+        $this->departures[] = $departures;
+
+        return $this;
+    }
+
+    /**
+     * Remove departures
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $departures
+     */
+    public function removeDeparture(\WCS\CoavBundle\Entity\Flight $departures)
+    {
+        $this->departures->removeElement($departures);
+    }
+
+    /**
+     * Get departures
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getDepartures()
+    {
+        return $this->departures;
+    }
+
+
+
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $pilots;
+
+    /**
+     * Constructor
+     */
+    public function __constructpilots()
+    {
+        $this->pilots = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add pilots
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $pilots
+     * @return Terrain
+     */
+    public function addPilots(\WCS\CoavBundle\Entity\Flight $pilots)
+    {
+        $this->pilots[] = $pilots;
+
+        return $this;
+    }
+
+    /**
+     * Remove pilots
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $pilots
+     */
+    public function removePilot(\WCS\CoavBundle\Entity\Flight $pilots)
+    {
+        $this->pilots->removeElement($pilots);
+    }
+
+    /**
+     * Get pilots
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPilots()
+    {
+        return $this->pilots;
     }
 }

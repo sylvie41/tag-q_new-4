@@ -80,4 +80,98 @@ class Reservation
     {
         return $this->nbSeats;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $passengers;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->passengers = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add passengers
+     *
+     * @param \WCS\CoavBundle\Entity\User $passengers
+     * @return Reservation
+     */
+    public function addPassenger(\WCS\CoavBundle\Entity\User $passengers)
+    {
+        $this->passengers[] = $passengers;
+
+        return $this;
+    }
+
+    /**
+     * Remove passengers
+     *
+     * @param \WCS\CoavBundle\Entity\User $passengers
+     */
+    public function removePassenger(\WCS\CoavBundle\Entity\User $passengers)
+    {
+        $this->passengers->removeElement($passengers);
+    }
+
+    /**
+     * Get passengers
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPassengers()
+    {
+        return $this->passengers;
+    }
+
+
+
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $departures;
+
+    /**
+     * Constructor
+     */
+    public function __constructDeparture()
+    {
+        $this->departures = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add departures
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $departures
+     * @return Terrain
+     */
+    public function addDeparture(\WCS\CoavBundle\Entity\Flight $departures)
+    {
+        $this->departures[] = $departures;
+
+        return $this;
+    }
+
+    /**
+     * Remove departures
+     *
+     * @param \WCS\CoavBundle\Entity\Flight $departures
+     */
+    public function removeDeparture(\WCS\CoavBundle\Entity\Flight $departures)
+    {
+        $this->departures->removeElement($departures);
+    }
+
+    /**
+     * Get departures
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDepartures()
+    {
+        return $this->departures;
+    }
 }
