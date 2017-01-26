@@ -32,4 +32,3 @@ WCS\CoavBundle\Entity\Flight:
             inversedBy: departures
 
 
-            

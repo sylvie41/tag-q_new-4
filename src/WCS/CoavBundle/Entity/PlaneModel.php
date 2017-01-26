@@ -9,8 +9,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class PlaneModel
 {
+
     /**
-     * @var int
+     * @var  int
      */
     private $id;
 
@@ -38,6 +39,12 @@ class PlaneModel
      * @var string
      */
     private $status;
+
+
+    /**
+     * @var string
+     */
+    private $arrivals;
 
 
     /**
@@ -72,6 +79,30 @@ class PlaneModel
     {
         return $this->model;
     }
+
+    /**
+     * Set arrivals
+     *
+     * @param string $arrivals
+     * @return PlaneModel
+     */
+    public function setArrivals($arrivals)
+    {
+        $this->arrivals = $arrivals;
+
+        return $this;
+    }
+
+    /**
+     * Get arrivals
+     *
+     * @return string
+     */
+    public function getArrivals()
+    {
+        return $this->arrivals;
+    }
+
 
     /**
      * Set manufacturer
@@ -163,53 +194,5 @@ class PlaneModel
     public function getStatus()
     {
         return $this->status;
-    }
-
-
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $arrivals;
-
-    /**
-     * Constructor
-     */
-    public function __constructarrivals()
-    {
-        $this->arrivals = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add arrivals
-     *
-     * @param \WCS\CoavBundle\Entity\Flight $arrivals
-     * @return Terrain
-     */
-    public function addArrivals(\WCS\CoavBundle\Entity\Flight $arrivals)
-    {
-        $this->arrivals[] = $arrivals;
-
-        return $this;
-    }
-
-    /**
-     * Remove arrivals
-     *
-     * @param \WCS\CoavBundle\Entity\Flight $arrivals
-     */
-    public function removeArrival(\WCS\CoavBundle\Entity\Flight $arrivals)
-    {
-        $this->arrivals->removeElement($arrivals);
-    }
-
-    /**
-     * Get arrivals
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getArrivals()
-    {
-        return $this->arrivals;
     }
 }

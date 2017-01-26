@@ -17,9 +17,9 @@ WCS\CoavBundle\Entity\Reservation:
     lifecycleCallbacks: {  }
 
     manyToMany:
-            passengers:
-                targetEntity: User
-                mappedBy: reservation
+        passengers:
+            targetEntity: User
+            mappedBy: reservation
 
 
     oneToMany:

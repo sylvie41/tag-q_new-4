@@ -19,18 +19,12 @@ class User
      */
     private $name;
 
+
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var string
      */
     private $reservations;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->reservations = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get id
@@ -91,7 +85,7 @@ class User
     /**
      * Get reservations
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getReservations()
     {

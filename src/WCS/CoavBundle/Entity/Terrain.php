@@ -9,13 +9,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Terrain
 {
-    public function _toString()
+    public function __toString()
     {
         return $this->name;
     }
-
-
-
 
     /**
      * @var int
@@ -52,6 +49,11 @@ class Terrain
      */
     private $country;
 
+
+    /**
+     * @var string
+     */
+    private $pilots;
 
     /**
      * Get id
@@ -200,6 +202,11 @@ class Terrain
     {
         return $this->country;
     }
+
+
+
+
+
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
@@ -250,25 +257,12 @@ class Terrain
 
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $pilots;
-
-    /**
-     * Constructor
-     */
-    public function __constructpilots()
-    {
-        $this->pilots = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
      * Add pilots
      *
      * @param \WCS\CoavBundle\Entity\Flight $pilots
      * @return Terrain
      */
-    public function addPilots(\WCS\CoavBundle\Entity\Flight $pilots)
+    public function addPilot(\WCS\CoavBundle\Entity\Flight $pilots)
     {
         $this->pilots[] = $pilots;
 
@@ -294,4 +288,6 @@ class Terrain
     {
         return $this->pilots;
     }
+
+
 }
