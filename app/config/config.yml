@@ -77,3 +77,4 @@ sonata_block:
 
 sonata_admin:
     title: Flyaround
+    title_logo: bundles\wcscoav\img\sf2_flyaround_icon.png
